@@ -4,7 +4,6 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var axios = require("axios");
-var react = require("react");
 
 var db = require("./models");
 
@@ -23,13 +22,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./src/components/pages/Form2.js"));
 });
 
-app.use(axios.json());
-app.use(axios.urlencoded({ extended: true }));
-
-app.use(react.json());
-app.use(react.urlencoded({ extended: true }));
-
-require("./routes/index")(app);
+app.use(routes);
 
 
 mongoose.connect("mongodb://localhost/S.O.S.", { useNewUrlParser: true });
