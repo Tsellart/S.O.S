@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var axios = require("axios");
-var react = require("react")
+var react = require("react");
 
 var db = require("./models");
 
@@ -139,7 +139,7 @@ app.post("/items/:id", function(req, res) {
 
     db.Rate.create(req.body)
     .then(function(dbRate) {
-      return db.Users.findOneAndUpdate({ _id: req.params.id }, { note: dbRate._id }, { new: true });
+      return db.dbItems.findOneAndUpdate({ _id: req.params.id }, { note: dbRate._id }, { new: true });
     })
     .then(function(dbItems) {
       res.json(dbItems);
@@ -148,6 +148,18 @@ app.post("/items/:id", function(req, res) {
       res.json(err);
     });
 });
+
+app.post("/items", function(req, res) {
+db.Rate.aggregate([{
+    $group : {
+              count : {$sum : 1},    
+              totalAmount : {$sum : '$amount'} 
+            }
+          }
+      ]
+  );
+}
+);
 
 app.listen(PORT, function () {
   console.log("App running on port " + PORT + "!");
