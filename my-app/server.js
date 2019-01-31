@@ -1,9 +1,7 @@
 require("path");
 var express = require("express");
-var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var axios = require("axios");
 
 var db = require("./models");
 
@@ -15,19 +13,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./src/components/pages/Form2.js"));
 });
 
 app.use(routes);
 
-
 mongoose.connect("mongodb://localhost/S.O.S.", { useNewUrlParser: true });
-
-var db = mongojs(MONGODB_URI);
 
 db.on("error", function (error) {
   console.log("Database Error:", error);
