@@ -20,6 +20,14 @@ const footerStyle = {
     width: "100%"
 };
 
+const whiteText = {
+    color: "white",
+    margin: "auto"
+}
+const marginalize = {
+    margin: "auto"
+}
+
 class FormTwo extends Component {
   state = {
     Subscriptions: [],
@@ -53,7 +61,7 @@ class FormTwo extends Component {
             </Navbar>
             <Jumbotron>
                 <Container>
-                    <h1>Enter your Subscriptions!</h1>
+                    <h1 style = {whiteText}>Enter your Subscriptions!</h1>
                     <br></br>
                     <form>
                         <Row>
@@ -88,17 +96,13 @@ class FormTwo extends Component {
                             />
                             </Col>
                         </Row>
-                        <Row>
-                            <Col size="xs-3 sm-2">
-                                <Button
+                                <Button waves='light' style = {whiteText}
                                     onClick={this.handleFormSubmit}
                                     type="success"
                                     className="input-lg"
                                 >
                                     Submit
                                 </Button>
-                            </Col>
-                        </Row>
                     </form>
                 </Container>
             </Jumbotron>

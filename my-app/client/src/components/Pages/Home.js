@@ -8,13 +8,11 @@ import {Plan} from '../../IMG/Plan.jpg'
 const footerStyle = {
   fontSize: "20px",
   color: "white",
-  borderTop: "1px solid #E7E7E7",
   textAlign: "center",
-  padding: "20px",
   position: "fixed",
   left: "0",
   bottom: "0",
-  height: "60px",
+  height: "25px",
   width: "100%"
 };
 
