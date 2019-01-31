@@ -19,9 +19,16 @@ const footerStyle = {
 };
 
 const sizer = {
-  width :"40%",
   margin: "auto",
-  padding: "10px"
+  padding: "5px",
+  backgroundColor: "#696969",
+  color: "black"
+}
+
+const colorer = {
+  backgroundColor: "#696969",
+  width: "80vh",
+  margin: "auto"
 }
 
 const whiteText = {
@@ -38,15 +45,15 @@ class Home extends Component {
         </NavItem>
       </Navbar>
       <Jumbotron>
-        <Card style = {sizer} header={<CardTitle reveal image={require('../../IMG/Plan.jpg')} waves='light'/>}
+        <Card style = {colorer} header={<CardTitle reveal image={require('../../IMG/Plan.jpg')} style = {sizer} waves='light'/>}
           title="Subscribe or Save"
-          reveal={<h2>A subscription tracker designed to calculate monthly
+          reveal ={<h2>A subscription tracker designed to calculate monthly
             expenditures and remind users of when payments are due. It is valuable
             as a tool to follow financial output and as a visual aid to show
             where money is going.</h2>}>
           <br></br>
           <Button waves='light'>
-          <Link style = {whiteText} to = {'/Form'}>Sign Up</Link>
+          <Link style = {whiteText} to = {'/Form2'}>Sign Up</Link>
           </Button>
         </Card>
       </Jumbotron>

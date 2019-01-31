@@ -54,6 +54,7 @@ class FormTwo extends Component {
             <Jumbotron>
                 <Container>
                     <h1>Enter your Subscriptions!</h1>
+                    <br></br>
                     <form>
                         <Row>
                             <Col size="xs-9 sm-10">
@@ -64,6 +65,9 @@ class FormTwo extends Component {
                                 placeholder="Service"
                             />
                             </Col>
+                        </Row>
+                            <br></br>
+                        <Row>
                             <Col size="xs-9 sm-10">
                             <Input
                                 name="price"
@@ -72,6 +76,9 @@ class FormTwo extends Component {
                                 placeholder="Price"
                             />
                             </Col>
+                        </Row>
+                            <br></br>
+                        <Row>
                             <Col size="xs-9 sm-10">
                             <Input
                                 name="rate"
