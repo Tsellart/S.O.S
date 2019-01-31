@@ -2,33 +2,25 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var ItemsSchema = new Schema({
-  userName: {
-    type: String,
-    unique: true
-    },
-  service: {
+var itemsSchema = new Schema({
+  subscription: {
     type: String,
     unique: true
     },
   price: {
-    type: String,
-    unique: true
-  },
+    type: String
+    },
   rate: {
     type: String,
     unique: true
-  },
-  category: {
-    type: String,
-    unique: true
-  },
+    },
+
   isSaved: {
     type: Boolean,
     default: false
   },
 });
 
-var Items = mongoose.model("Items", ItemsSchema);
+var Items = mongoose.model("Items", itemsSchema);
 
-module.exports = Items;
+module.exports = itemsSchema;
