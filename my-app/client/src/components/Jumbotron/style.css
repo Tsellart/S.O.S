@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: #836969;
+  background-color: #1B8366;
   border-radius: 0.3rem;
   margin: auto;
   height: 100vh;
@@ -23,3 +23,10 @@ h1 {
   text-align: center;
 }
 
+.card-reveal {
+  background-color: #E9AE0B;  
+}
+
+container {
+  background-color: #E9AE0B
+}

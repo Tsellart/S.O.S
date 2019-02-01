@@ -17,14 +17,20 @@ const footerStyle = {
     left: "0",
     bottom: "0",
     height: "60px",
-    width: "100%"
+    width: "100%",
+    backgroundColor: "#57C478"
 };
+
+const navColor = {
+    backgroundColor: "#57C478"
+}
+
+const conatinerColor = {
+    Color: "#E9AE0B"
+}
 
 const whiteText = {
     color: "white",
-    margin: "auto"
-}
-const marginalize = {
     margin: "auto"
 }
 
@@ -51,7 +57,7 @@ class FormTwo extends Component {
   render() {
     return (
         <div>
-            <Navbar brand='SuperScriber' right>
+            <Navbar style = {navColor} brand='S.O.S' right>
                 <NavItem>
                     <Link to = {'/Subscriptions'}>My Subscriptions</Link>
                 </NavItem>
@@ -63,7 +69,20 @@ class FormTwo extends Component {
                 <Container>
                     <h1 style = {whiteText}>Enter your Subscriptions!</h1>
                     <br></br>
-                    <form>
+                    <form style = {conatinerColor}>
+                        <Row>
+                            <Col size="xs-3 sm-4">
+                                <Input 
+                                    name="userName"
+                                    value={this.state.userName}
+                                    onChange={this.handleInputChange}
+                                    placeholder="Username"
+                                    />
+                            </Col>
+                        </Row>
+                        <br></br>
+                        <br></br>
+                        <br></br>
                         <Row>
                             <Col size="xs-9 sm-10">
                             <Input
@@ -96,13 +115,22 @@ class FormTwo extends Component {
                             />
                             </Col>
                         </Row>
+                        <Row>
+                            <Col size="xs-3 sm-6">
                                 <Button waves='light' style = {whiteText}
                                     onClick={this.handleFormSubmit}
                                     type="success"
                                     className="input-lg"
-                                >
+                                    >
                                     Submit
                                 </Button>
+                            </Col>
+                            <Col size="xs-3 sm-1">
+                                <Button waves='light'>
+                                <Link style = {whiteText} to = {'/Subscriptions'}>Continue</Link>
+                                </Button>
+                            </Col>
+                        </Row>
                     </form>
                 </Container>
             </Jumbotron>
