@@ -27,6 +27,7 @@ h1 {
   background-color: #E9AE0B;  
 }
 
-container {
-  background-color: #E9AE0B
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }

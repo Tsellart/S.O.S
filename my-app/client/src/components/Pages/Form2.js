@@ -31,7 +31,7 @@ const conatinerColor = {
 
 const whiteText = {
     color: "white",
-    margin: "auto"
+    backgroundColor: "E9AE0B"
 }
 
 class FormTwo extends Component {
@@ -84,7 +84,7 @@ class FormTwo extends Component {
                         <br></br>
                         <br></br>
                         <Row>
-                            <Col size="xs-9 sm-10">
+                            <Col size="xs-9 sm-12">
                             <Input
                                 name="service"
                                 value={this.state.service}
@@ -95,7 +95,7 @@ class FormTwo extends Component {
                         </Row>
                             <br></br>
                         <Row>
-                            <Col size="xs-9 sm-10">
+                            <Col size="xs-9 sm-12">
                             <Input
                                 name="price"
                                 value={this.state.price}
@@ -106,7 +106,7 @@ class FormTwo extends Component {
                         </Row>
                             <br></br>
                         <Row>
-                            <Col size="xs-9 sm-10">
+                            <Col size="xs-9 sm-12">
                             <Input
                                 name="rate"
                                 value={this.state.rate}
@@ -117,7 +117,7 @@ class FormTwo extends Component {
                         </Row>
                         <Row>
                             <Col size="xs-3 sm-6">
-                                <Button waves='light' style = {whiteText}
+                                <Button style = {whiteText}
                                     onClick={this.handleFormSubmit}
                                     type="success"
                                     className="input-lg"
@@ -126,7 +126,7 @@ class FormTwo extends Component {
                                 </Button>
                             </Col>
                             <Col size="xs-3 sm-1">
-                                <Button waves='light'>
+                                <Button>
                                 <Link style = {whiteText} to = {'/Subscriptions'}>Continue</Link>
                                 </Button>
                             </Col>
